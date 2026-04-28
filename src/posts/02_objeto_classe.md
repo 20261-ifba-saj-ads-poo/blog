@@ -83,7 +83,7 @@ Como fazer um saque quando a conta for com limite (cheque especial)?
 ```c
 
 int sacarComLimite(struct Conta minha_conta, float valor, float limite){
-  if(minha_conta.saldo>=valor+limite){
+  if(minha_conta.saldo+limite>=valor){
     minha_conta.saldo-=valor;
     return 1;
   }
