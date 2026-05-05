@@ -5,7 +5,7 @@ tag:
   - construtor
 category:
   - aula
-order: 7
+order: 3
 ---
 
 # Construtor
