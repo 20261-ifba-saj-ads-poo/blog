@@ -97,18 +97,16 @@ public int operar(char op, int v1, int v2){
 ```java
 class Conta{
   //...
-  Conta(int numero, String cliente){
+  Conta(int numero, String cliente, double saldo, double limite){
     this.numero = numero;
     this.cliente = cliente;
-    this.saldo = 0;
-    this.limite = 0;
-  }
-  Conta(int numero, String cliente, double saldo, double limite){
-    this(numero, cliente);
     this.saldo = saldo;
     this.limite = limite;
   }
 
+  Conta(Integer numero, String cliente) {
+    this(numero, cliente, 0, 0);
+  }
   //...
 }
 ```
