@@ -36,7 +36,7 @@ Desenhe o diagrama UML da classe TV e implemente o código em Java para construi
 
 ## Link para entrega
 
-[Entrega]()
+[Entrega](https://classroom.github.com/a/axOgMl_4)
 
 ::: details
 
