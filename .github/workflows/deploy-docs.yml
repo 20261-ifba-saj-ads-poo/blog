@@ -20,10 +20,12 @@ jobs:
           # if your docs needs submodules, uncomment the following line
           # submodules: true
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v5
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v6 # Você pode usar @v5 ou @v6
         with:
-          version: 10 # Optional: specify a pnpm version (defaults to 'latest')
+          version: 11 # Força a versão 11 conforme o seu log do Corepack
+          run_install: |
+            - args: [--frozen-lockfile, --no-only-built-dependencies]
 
 
       - name: Setup Node.js
@@ -35,7 +37,6 @@ jobs:
       - name: Install Deps
         run: |
           corepack enable
-          pnpm approve-builds --all
           pnpm install --frozen-lockfile
 
       - name: Build Docs
