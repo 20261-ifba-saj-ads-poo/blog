@@ -21,11 +21,10 @@ jobs:
           # submodules: true
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v6 # Você pode usar @v5 ou @v6
+        uses: pnpm/action-setup@v6 
         with:
-          version: 11 # Força a versão 11 conforme o seu log do Corepack
-          run_install: |
-            - args: [--frozen-lockfile, --no-only-built-dependencies]
+          version: 11 
+          run_install: true
 
 
       - name: Setup Node.js
