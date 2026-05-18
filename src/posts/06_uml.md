@@ -5,7 +5,7 @@ tag:
   - UML
 category:
   - aula
-order: 8
+order: 6
 ---
 # UML 
 ## Estereótipo de uma Classe em UML
