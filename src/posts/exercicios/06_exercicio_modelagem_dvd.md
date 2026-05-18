@@ -33,11 +33,7 @@ adaptado de [^Takenami]
 
 ## Link para entrega
 
-[Entrega]()
-::: details
+[Entrega](https://classroom.github.com/a/37LscCdR)
 
-  <!-- @include: ../../../notebook/md/DVD.md -->
-
-:::
 
 <!-- @include: ../../../includes/bib.md -->
