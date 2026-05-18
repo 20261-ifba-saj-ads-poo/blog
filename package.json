@@ -2,12 +2,6 @@
   "name": "blog-material-aula",
   "description": "Materia de Aula de POO do semestre 2026.1",
   "version": "1.0.0",
-  "pnpm": {
-    "allowBuilds": {
-      "@parcel/watcher": true,
-      "esbuild": true
-    }
-  },
   "license": "MIT",
   "type": "module",
   "scripts": {
