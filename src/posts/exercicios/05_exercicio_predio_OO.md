@@ -5,7 +5,6 @@ tag:
   - java
 category:
   - exercicio
-  - entrega
 order: 6
 ---
 
@@ -17,9 +16,6 @@ order: 6
     - Cada andar do prédio pode ter uma quantidade de salas diferentes.
     - Cada sala pode ter um tamanho diferente.
 
-## Link da entrega
-
-[Entrega]()
 
 
 [Repositório JavaFX](https://github.com/20261-ifba-saj-ads-poo/javafx-predio)
