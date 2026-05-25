@@ -21,6 +21,10 @@ public class App {
         IO.println(conta2);
         IO.println(String.format("Total de Contas: %d", ag1.totalContas()));
         IO.println(String.format("Total de Dinheiro: %.2f", ag1.totalDinheiro()));
+
+        ag1.getContas().clear();
+        IO.println(String.format("Total de Contas: %d", ag1.totalContas()));
+        IO.println(String.format("Total de Dinheiro: %.2f", ag1.totalDinheiro()));
         
     }
 }

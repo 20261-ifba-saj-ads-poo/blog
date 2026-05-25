@@ -4,21 +4,20 @@ public class Conta {
     private String cliente;
     private double saldo;
     private double limite;
+    private Agencia agencia;
 
-    //
-    Conta(int numero, String cliente) {
+    public Conta(Agencia agencia,int numero, String cliente) {
+        this(agencia,numero, cliente, 0, 100);
+    }
+
+    public Conta(Agencia agencia,int numero, String cliente, double saldo, double limite) {
+        this.agencia=agencia;
         if (numero < 0) {
             this.numero = 999;
         } else {
             this.numero = numero;
         }
         setCliente(cliente);
-        this.saldo = 0;
-        this.limite = 100;
-    }
-
-    public Conta(int numero, String cliente, double saldo, double limite) {
-        this(numero, cliente);
         this.saldo = saldo;
         this.limite = limite;
     }
@@ -63,6 +62,17 @@ public class Conta {
     }
     public double getSaldo() {
         return saldo;
+    }
+    public Agencia getAgencia() {
+        return agencia;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Conta outraConta){
+            return numero == outraConta.getNumero();
+        }
+        return false;
     }
 
     @Override

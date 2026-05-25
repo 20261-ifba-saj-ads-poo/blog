@@ -20,7 +20,7 @@ public class Agencia {
         int numeroConta = numero * 100;
         numeroConta += contas.size();
         // instancia nova conta com o numero calculado
-        Conta novConta = new Conta(numeroConta, cliente);
+        Conta novConta = new Conta(this,numeroConta, cliente);
         // guardo nova conta na minha lista de contas
         contas.add(novConta);
         // devolvo a conta para quem pediu
@@ -47,6 +47,10 @@ public class Agencia {
             }
         }
         return null;
+    }
+
+    public List<Conta> getContas() {
+        return List.copyOf(contas);
     }
 
 }
