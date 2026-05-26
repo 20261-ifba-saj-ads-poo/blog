@@ -3,6 +3,9 @@
   "description": "Materia de Aula de POO do semestre 2026.1",
   "version": "1.0.0",
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ],
     "allowBuilds": {
       "@parcel/watcher": true,
       "esbuild": true
@@ -24,11 +27,6 @@
     "vue": "^3.5.31",
     "vuepress": "2.0.0-rc.27",
     "vuepress-theme-hope": "2.0.0-rc.104"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   },
   "dependencies": {
     "@mathjax/src": "^4.1.1",

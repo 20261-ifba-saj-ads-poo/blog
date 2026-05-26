@@ -19,3 +19,14 @@ order: 11
 ![Movimentação de um subordinado entre dois imediatos](./gifs/11_exercicio_exercico_simplificado.gif)
    
 
+A movimentação de um subordinado entre dois imediatos deve ser feita utilizando os métodos de remoção e adição de subordinados (no imediato)
+
+```java
+imediato1.adicionarSubordinado(subordinado);
+```
+
+ou quando um subordinado tem o valor do seu imetiato alterado.
+
+```java
+subordinado.setImediato(imediato2);
+```
