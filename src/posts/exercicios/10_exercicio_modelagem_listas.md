@@ -46,7 +46,7 @@ order: 10
 </figure>
    
 
-   <div style="display:none">     
+   
    
    ::: details 
 
@@ -61,7 +61,7 @@ order: 10
 
    ::: 
   
-   </div>
+   
   
 ## **Sistema de Loja de Roupas**
    Crie um sistema para gerenciar uma loja de roupas. A loja tem vários departamentos, como roupas masculinas, femininas e infantis. Cada departamento contém vários produtos (roupas) com informações como preço, tamanho e cor. Os clientes podem adicionar produtos ao carrinho de compras e finalizar suas compras. Implemente funcionalidades para calcular o total das compras e listar os produtos em um carrinho.
@@ -104,6 +104,8 @@ order: 10
 
 ## **Sistema de Cinema e Ingressos**
    Desenvolva um sistema para um cinema. O cinema exibe vários filmes, cada um com sessões em horários diferentes. Os clientes podem comprar ingressos para sessões específicas. O sistema deve controlar a quantidade de ingressos disponíveis por sessão e permitir consultar sessões por filme.
+
+ [fx-cinema](https://github.com/20261-ifba-saj-ads-poo/fx-cinema)  
 
 ## **Gestão de Condomínio Residencial**
    Crie um sistema para gerenciar um condomínio. O condomínio possui apartamentos, moradores e funcionários. Cada apartamento pode ter vários moradores. Os funcionários podem ser porteiros, zeladores ou seguranças. Implemente funcionalidades para listar moradores por apartamento e funcionários por função.
