@@ -61,6 +61,7 @@ order: 10
 
    ::: 
   
+  [Entrega Gerenciamento de Escola com telas](https://classroom.github.com/a/dT5q4EX7)
    
   
 ## **Sistema de Loja de Roupas**
