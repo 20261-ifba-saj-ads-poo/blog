@@ -71,4 +71,3 @@ end
    - Falha ao criar um chamado sem prioridade.  
    - Falha ao ultrapassar o limite de 10 chamados abertos por usuário.  
    - Falha ao fechar um chamado fora do prazo de resolução da sua prioridade.  
-</content>
