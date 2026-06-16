@@ -10,21 +10,19 @@ Grandes empresas precisam controlar solicitações, cotações, aprovações e r
 ## Requisitos Funcionais
 | Camada | Funcionalidade |
 |--------|----------------|
-| **Apresentação (JavaFX)** | Tela de cadastro de fornecedores, criação de pedidos de compra, acompanhamento de cotações, aprovação de compras e registro de recebimento.
+| **Apresentação (JavaFX)** | Tela de cadastro de fornecedores, centro de custos (ligados aos produtos), criação de pedidos de compra, acompanhamento de cotações, aprovação de compras e registro de recebimento.
 | **Negócio** | • Validar orçamento disponível. <br>• Verificar conformidade de fornecedor (habilitado). <br>• Aplicar descontos conforme tabela negociada.
 | **Dados** | • Armazenar fornecedores, pedidos e cotações em `ArrayList`/`HashMap`. <br>• CRUD completo para cada entidade.
 
-## Regras de Negócio (3)
+## Regras de Negócio (2)
 1. **Orçamento Suficiente** – O valor total do pedido não pode ultrapassar o orçamento liberado para o centro de custo.
 2. **Fornecedor Habilitado** – Só é permitido criar pedido para fornecedor com status “ativo” e sem pendências financeiras.
-3. **Desconto Automático** – Se o volume atingir a faixa negociada, aplicar o percentual de desconto definido no contrato.
 
 ## Fluxo de Comunicação
 1. Usuário preenche pedido de compra.
-2. Camada de Apresentação envia dados ao **Serviço de Compras**.
-3. Serviço verifica orçamento, fornecedor e aplica desconto.
-4. Se tudo estiver correto, persiste o pedido e devolve confirmação.
-5. Caso alguma regra falhe, exibe mensagem de erro.
+1. Camada de Apresentação envia dados ao **Serviço de Compras**.
+1. Se tudo estiver correto, persiste o pedido e devolve confirmação.
+1. Caso alguma regra falhe, exibe mensagem de erro.
 
 ### Diagrama de Sequência
 ```plantuml
@@ -43,7 +41,6 @@ Usuario -> TelaCompra : preencher pedido
 TelaCompra -> ServicoCompra : criarPedido(dados)
 ServicoCompra -> ServicoCompra : validarOrcamento()
 ServicoCompra -> ServicoCompra : validarFornecedor()
-ServicoCompra -> ServicoCompra : aplicarDesconto()
 alt regras ok
     ServicoCompra -> RepositorioCompra : salvarPedido()
     RepositorioCompra --> ServicoCompra : sucesso
@@ -68,6 +65,6 @@ end
 ## Entregáveis
 1. Projeto Java (Maven/Gradle) com pacotes `presentation`, `business`, `data`.
 2. README com instruções de compilação e execução.
-3. Diagrama de classes (`Fornecedor`, `PedidoCompra`, `Cotacao`).
+3. Diagrama de classes (`Fornecedor`, `PedidoCompra`, `Cotacao`, `CentroCusto`, `Produto`).
 4. Diagrama de sequência (criação de pedido).
-5. Testes JUnit: orçamento insuficiente, fornecedor desabilitado, desconto aplicado corretamente.
+5. Testes JUnit: orçamento insuficiente, fornecedor desabilitado.
