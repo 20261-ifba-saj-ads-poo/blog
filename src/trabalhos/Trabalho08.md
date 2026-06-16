@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 08 – Sistema de Gerenciamento de Cursos (Matrícula de Alunos)
 
 ## Cenário

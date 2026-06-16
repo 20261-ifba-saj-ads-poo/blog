@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 21 – Sistema de Gerenciamento de Transporte Público – Bilhetagem
 
 ## Cenário

@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 09 – Sistema de Gerenciamento de Pedidos (Restaurante)
 
 ## Cenário

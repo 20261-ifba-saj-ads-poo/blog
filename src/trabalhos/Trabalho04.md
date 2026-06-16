@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 04 – Sistema de Gerenciamento de Eventos (Inscrição de Participantes)
 
 ## Cenário

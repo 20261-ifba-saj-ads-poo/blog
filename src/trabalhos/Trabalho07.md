@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 07 – Sistema de Controle de Horas Extras
 
 ## Cenário

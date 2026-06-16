@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 14 – Sistema de Controle de Produção – Ordem de Fabricação
 
 ## Cenário

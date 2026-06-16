@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 27 – Sistema de Gerenciamento de Inventário de Laboratório
 
 ## Cenário

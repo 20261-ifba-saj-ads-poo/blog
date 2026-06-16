@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 19 – Sistema de Gerenciamento de Atividades Esportivas – Inscrição e Resultados
 
 ## Cenário

@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 13 – Sistema de Gerenciamento de Inventário de TI – Equipamentos
 
 ## Cenário

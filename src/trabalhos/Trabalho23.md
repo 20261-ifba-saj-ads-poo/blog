@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 23 – Sistema de Gerenciamento de Atendimentos – Chamados e Suporte
 
 ## Cenário

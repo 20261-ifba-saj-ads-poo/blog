@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 36 – Sistema de Gestão de Bens Públicos
 
 ## Cenário

@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 22 – Sistema de Gerenciamento de Cursos Online – Inscrição e Progresso
 
 ## Cenário

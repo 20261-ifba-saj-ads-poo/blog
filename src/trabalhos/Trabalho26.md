@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 26 – Sistema de Controle de Acesso Biométrico
 
 ## Cenário

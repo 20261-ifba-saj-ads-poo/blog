@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 35 – Sistema de Gestão de Mudanças de Pequenos Negócios
 
 ## Cenário

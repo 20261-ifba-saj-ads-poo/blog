@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 29 – Sistema de Controle de Qualidade – Inspeções e Relatórios
 
 ## Cenário

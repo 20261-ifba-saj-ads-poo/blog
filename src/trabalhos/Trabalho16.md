@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 16 – Sistema de Controle de Documentos – Arquivamento e Busca
 
 ## Cenário

@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 12 – Sistema de Gerenciamento de Saúde – Agendamento de Consultas
 
 ## Cenário

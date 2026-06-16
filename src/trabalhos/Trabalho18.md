@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 18 – Sistema de Gerenciamento de Loja – Carrinho de Compras
 
 ## Cenário

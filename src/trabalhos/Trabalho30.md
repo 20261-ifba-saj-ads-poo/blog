@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 30 – Sistema de Gerenciamento de Recursos Humanos – Folha de Pagamento
 
 ## Cenário

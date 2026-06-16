@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 31 – Sistema de Gestão de Direitos Autorais
 
 ## Cenário

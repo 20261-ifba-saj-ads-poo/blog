@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 32 – Sistema de Gestão de Energia Renovável
 
 ## Cenário

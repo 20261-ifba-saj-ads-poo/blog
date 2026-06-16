@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 05 – Sistema de Controle de Vendas (Cadastro de Produtos e Vendas)
 
 ## Cenário

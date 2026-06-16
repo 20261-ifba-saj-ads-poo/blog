@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 25 – Sistema de Gerenciamento de Eventos Corporativos – Agenda e Convites
 
 ## Cenário

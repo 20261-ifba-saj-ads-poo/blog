@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 33 – Sistema de Gestão de Compras Corporativas
 
 ## Cenário

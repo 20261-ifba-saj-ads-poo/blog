@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 02 – Sistema de Controle de Estoque (Cadastro de Produtos)
 
 ## Cenário

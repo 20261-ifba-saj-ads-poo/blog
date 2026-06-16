@@ -1,3 +1,7 @@
+---
+article: false
+---
+
 # Trabalho 28 – Sistema de Gerenciamento de Projetos – Tarefas e Sprints
 
 ## Cenário
