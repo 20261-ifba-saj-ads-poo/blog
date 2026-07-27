@@ -5,7 +5,6 @@ tag:
   - java
 category:
   - exercicio
-  - entrega
 order: 11
 ---
 
