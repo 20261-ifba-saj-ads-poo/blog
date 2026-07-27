@@ -6,7 +6,7 @@ tag:
 category:
   - exercicio
   - entrega
-order: 13
+order: 17
 ---
 
 # Exercício Herança 3: Converter para Extenso
