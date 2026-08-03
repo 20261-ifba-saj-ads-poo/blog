@@ -1,0 +1,40 @@
+```plantuml
+@startuml
+
+Class Throwable
+Class Error #red 
+Class Exception #blue
+Class IOException  #blue
+Class FileNotFoundException  #blue
+Class RuntimeException  #green
+Class NullPointerException  #green
+Class ClassCastException #green
+Class IndexOutOfBoundsException #green
+Class ArrayIndexOutOfBoundsException #green
+
+Throwable <|-- Error
+Throwable <|-- Exception
+
+Exception <|-- IOException
+Exception <|-- RuntimeException
+
+IOException <|-- FileNotFoundException
+
+
+RuntimeException <|--  NullPointerException  
+RuntimeException <|--  ClassCastException 
+RuntimeException <|--  IndexOutOfBoundsException 
+
+IndexOutOfBoundsException <|--  ArrayIndexOutOfBoundsException 
+
+legend right
+    |Cor| Tipo |
+    |<#red>| Erro|
+    |<#blue>| Checadas|
+    |<#green>| Não checadas|
+endlegend
+
+hide members
+@enduml
+
+```

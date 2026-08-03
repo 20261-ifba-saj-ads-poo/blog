@@ -1,12 +1,12 @@
 ---
 icon: edit
-date: 2026-08-03 19:20:00.00 -3
+date: 2025-08-14 18:30:00.00 -3
 tag:
   - heranca
   - generics
 category:
   - aula
-order: 21
+order: 20
 ---
 
 # Tipificação Forte com Generics
@@ -125,26 +125,6 @@ Com generics, podemos criar coleções ou classes que trabalham com tipos espec�
 
 <codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
-## Restringir o tipo genérico `T`
-
-O uso de `T extends` em generics permite restringir o tipo genérico `T` a uma classe ou interface específica, garantindo que apenas subtipos dessa classe ou interface possam ser usados. Isso é útil para impor limites aos tipos aceitos e acessar métodos ou propriedades específicas da classe ou interface.
-
-Imagine que no exemplo anterior, alguém defina um novo veículo como o exibido abaixo:
-
-@[code](./code/generics/Pop.java)
-
-Faz sentido ter um veículo como `Carro` passar como tipo T um `Interger`?
-
-É possível fazer uma restrição para que todos os tipos definidos para o genérico sejam filhos de `Motor`, por exemplo.
-
-@[code](./code/generics/extends/Veiculo.java)
-@[code](./code/generics/Pop.java)
-
-::: danger Erro
-Com essa restrição, a classe `Pop` não poderia ser compilada já que `Integer` não herda de `Motor`
-:::
-
-
 ## Herança com Generics
 
 A combinação de herança e generics em Java permite criar hierarquias de classes que são flexíveis e seguras em termos de tipos. 
@@ -189,7 +169,7 @@ As subclasses de Veiculo que especificam o tipo de motor.
 
 - `Carro`: Usa um `MotorCombustao`.
 - `Moto`: Usa um `MotorCombustao`.
-- `Caminhao`: Usa um `MotorEletrico`.
+- `CaminhaoEletrico`: Usa um `MotorEletrico`.
 
 
 
@@ -206,8 +186,7 @@ A classe `Veiculo` é uma classe que aceita um tipo `T` genérico para o motor. 
 
 @[code](./code/generics/Carro.java)
 @[code](./code/generics/Moto.java)
-@[code](./code/generics/Caminhao.java)
-
+@[code](./code/generics/CaminhaoEletrico.java)
 
 
 Testando a Hierarquia
@@ -224,6 +203,23 @@ A grande vantagem dessa abordagem é que ao chamar o método `getMotor`, o tipo 
 
 @[code](./code/generics/extends/TestaVeiculos.java)
 
+
+## Restringir o tipo genérico `T`
+
+O uso de `T extends` em generics permite restringir o tipo genérico `T` a uma classe ou interface específica, garantindo que apenas subtipos dessa classe ou interface possam ser usados. Isso é útil para impor limites aos tipos aceitos e acessar métodos ou propriedades específicas da classe ou interface.
+
+Imagine que no exemplo anterior, alguém defina um novo veículo como o exibido abaixo:
+
+@[code](./code/generics/Pop.java)
+
+Faz sentido ter um veículo como `Carro` passar como tipo T um `Interger`?
+
+É possível fazer uma restrição para que todos os tipos definidos para o genérico sejam filhos de `Motor`, por exemplo.
+
+@[code](./code/generics/extends/Veiculo.java)
+@[code](./code/generics/Pop.java)
+
+Com essa restrição, a classe `Pop` não poderia ser compilada já que `Integer` não herda de `Motor`
 
 
 ### Outro Exemplo

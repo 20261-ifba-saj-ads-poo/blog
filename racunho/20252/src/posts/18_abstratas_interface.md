@@ -1,15 +1,15 @@
 ---
 icon: edit
-date: 2026-08-03 18:00:00.00 -3
+date: 2026-03-09 18:30:00.00 -3
 tag:
   - classes-abstratas
   - interface
 category:
   - aula
-order: 20
+order: 18
 ---
 
-# Interface
+# Classes Abstratas e Interface
 
 
 - Classes abstratas são classes que não produzem instâncias. Elas agrupam características e comportamentos que serão herdados por outras classes

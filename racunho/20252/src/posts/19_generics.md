@@ -1,12 +1,12 @@
 ---
 icon: edit
-date: 2026-08-03 19:20:00.00 -3
+date: 2026-03-16 18:30:00.00 -3
 tag:
   - heranca
   - generics
 category:
   - aula
-order: 21
+order: 19
 ---
 
 # Tipificação Forte com Generics

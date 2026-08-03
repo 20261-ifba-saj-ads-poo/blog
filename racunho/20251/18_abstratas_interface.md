@@ -1,15 +1,15 @@
 ---
 icon: edit
-date: 2026-08-03 18:00:00.00 -3
+date: 2025-08-11 19:40:00.00 -3
 tag:
   - classes-abstratas
   - interface
 category:
   - aula
-order: 20
+order: 19
 ---
 
-# Interface
+# Classes Abstratas e Interface
 
 
 - Classes abstratas são classes que não produzem instâncias. Elas agrupam características e comportamentos que serão herdados por outras classes
@@ -52,7 +52,7 @@ public abstract class Pessoa {
     String nome; 
     public abstract void estacionar(); 
     public void entrar(){ 
-        IO.println("Entrando na Faculdade"); 
+        System.out.println("Entrando na Faculdade"); 
     } 
 }
 ```
@@ -62,7 +62,7 @@ public class Aluno extends Pessoa {
     double media; 
 
     public void estacionar(){ 
-        IO.println("Estacionando na área para estudante..."); 
+        System.out.println("Estacionando na área para estudante..."); 
     } 
 } 
 ```
@@ -71,7 +71,7 @@ public class Aluno extends Pessoa {
 public class Professor extends Pessoa { 
     double salario;
     public void estacionar(){ 
-        IO.println("Estacionando nas vagas de professor"); 
+        System.out.println("Estacionando nas vagas de professor"); 
     } 
 }
 ```
@@ -130,7 +130,7 @@ Considere o nosso `ControleDeBonificacao`:
 class ControleDeBonificacoes {
     private double totalDeBonificacoes = 0;
     public void registra(Funcionario f) {
-        IO.println("Adicionando bonificação do funcionario: " + f);
+        System.out.println("Adicionando bonificação do funcionario: " + f);
         this.totalDeBonificacoes += f.getBonificacao();
     }
     public double getTotalDeBonificacoes() {
@@ -332,13 +332,12 @@ As classes concretas que derivam direta ou indiretamente da classe Conta devem p
 class ContaPoupanca extends Conta {
     private int diaDoAniversario ;
     public void imprimeExtratoDetalhado(){
-        IO.println("EXTRATO DETALHADO DE CONTA POUPANÇA") ;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
-        LocalDateTime agora = LocalDateTime.now();
-        
-        IO.println("DATA:"+ agora.format(formatter));
-        IO.println("SALDO:"+this.getSaldo());
-        IO.println("ANIVERSÁRIO:"+this.diaDoAniversario);
+        System.out.println("EXTRATO DETALHADO DE CONTA POUPANÇA") ;
+        SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy HH:mm:ss") ;
+        Date agora = new Date();
+        System.out.println("DATA:"+sdf.format(agora));
+        System.out.println("SALDO:"+this.getSaldo());
+        System.out.println("ANIVERSÁRIO:"+this.diaDoAniversario);
     }
 }
 ```
@@ -607,15 +606,8 @@ Perceba que o código pode parecer estranho, pois a interface não declara méto
 
 ```plantuml
 @startuml
-interface Conta{
-    + double getSaldo()
-    + void deposita(double valor)
-    + void saca(double valor)
-    + void atualiza(double taxaSelic)
-}
-interface  Tributavel{
-    + void calcularTributo()
-}
+interface Conta
+interface  Tributavel
 interface ContaTributavel extends Conta, Tributavel
 class ContaInvestimento implements ContaTributavel
 @enduml
@@ -639,7 +631,7 @@ public interface ExemploInterface {
     void metodoAbstrato();
 
     default void metodoDefault() {
-        IO.println("Implementação padrão do método default.");
+        System.out.println("Implementação padrão do método default.");
     }
 }
 ```
@@ -649,7 +641,7 @@ As classes que implementam essa interface podem optar por sobrescrever o método
 public class ExemploClasse implements ExemploInterface {
     @Override
     public void metodoAbstrato() {
-        IO.println("Implementação do método abstrato.");
+        System.out.println("Implementação do método abstrato.");
     }
 
     // Não é necessário sobrescrever o método default
@@ -662,12 +654,12 @@ Se uma classe implementa várias interfaces que possuem métodos `default` com o
 ```java
 public interface InterfaceA {
     default void metodo() {
-        IO.println("InterfaceA - método default");
+        System.out.println("InterfaceA - método default");
     }
 }
 public interface InterfaceB {
     default void metodo() {
-        IO.println("InterfaceB - método default");
+        System.out.println("InterfaceB - método default");
     }
 }
 public class ExemploClasse implements InterfaceA, InterfaceB {
@@ -682,9 +674,7 @@ public class ExemploClasse implements InterfaceA, InterfaceB {
 
 Caso a classe não sobrescreva o método, ocorrerá um erro de compilação devido à ambiguidade entre os métodos `default` das interfaces.
 
-::: danger
 > _Duplicate default methods named metodo with the parameters () and () are inherited from the types InterfaceB and InterfaceAJava(67109917)_
-:::
 
 
 ## Referências

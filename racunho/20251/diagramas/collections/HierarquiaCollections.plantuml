@@ -1,0 +1,32 @@
+```plantuml
+@startuml
+interface Iterable
+interface Collection
+interface List
+interface Queue
+interface Set
+interface SortedSet
+interface Deque
+interface NavigableSet
+
+
+Iterable <|-- Collection
+Collection <|-- List
+Collection <|-- Queue
+Collection <|-- Set
+Queue <|-- Deque
+Set <|-- SortedSet
+SortedSet <|-- NavigableSet
+LinkedList .|> List
+LinkedList .|> Deque
+
+
+note right of Collection: Interface raiz da\nhierarquia Collection
+note right of List: Coleção ordenada
+note right of Set: Sem elementos duplicados
+note right of Queue: Mantém elementos em fila (FIFO)
+note right of Deque: Fila dupla (FIFO e LIFO)
+note right of NavigableSet: Métodos de navegação
+@enduml
+
+```

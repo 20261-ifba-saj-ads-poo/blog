@@ -1,0 +1,1 @@
+[lambdas](https://www.oracle.com/technical-resources/articles/java/architect-lambdas-part1.html)
