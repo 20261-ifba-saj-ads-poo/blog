@@ -35,8 +35,10 @@ Considerando o modelo a seguir:
 ```plantuml
 abstract Veiculo{
   Motor motor
-  Veiculo (Motor motor)
+  String modelo
+  Veiculo (Motor motor, String modelo)
   Motor getMotor()
+  {abstract} void ligar()
 }
 
 class Moto extends Veiculo
@@ -58,6 +60,16 @@ class MotorEletrico extends Motor{
 Veiculo . Motor
 
 ```
+
+@[code](./code/generics/Veiculo.java)
+
+@[code](./code/generics/Motor.java)
+
+@[code](./code/generics/Moto.java)
+
+@[code](./code/generics/Caminhao.java)
+
+
 
 Pela definição da classe `Veiculo`, o atributo `motor` é do tipo `Motor`. Isso significa que qualquer instância de `Veiculo` (`Carro`, `Moto` ou `Caminhao`) pode ter um motor de qualquer tipo que herde de `Motor`, como `MotorCombustao` ou `MotorEletrico`.
 

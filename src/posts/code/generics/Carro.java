@@ -1,5 +1,5 @@
 
-public class Carro extends Veiculo<MotorCombustao> {
+public class Carro extends Veiculo {
     public Carro(String modelo, MotorCombustao motor) {
         super(modelo, motor);
     }

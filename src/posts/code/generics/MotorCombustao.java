@@ -1,4 +1,4 @@
-public class MotorCombustao {
+public class MotorCombustao extends Motor {
     private int cilindradas;
 
     public MotorCombustao(int cilindradas) {

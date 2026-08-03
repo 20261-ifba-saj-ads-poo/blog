@@ -31,7 +31,7 @@ Classe Abstrata: Crie uma classe abstrata chamada Item para representar o item g
 
 Interfaces: Crie uma interface para representar os métodos relacionados com a possibilidade do item ser emprestado e devolvido. Essa interface Emprestável deve conter os métodos para empréstimo (o item deve saber que está emprestado), devolução e calculo de multa por dia de atraso.
 
-Classes Concretas: Crie classes concretas para cada tipo de item (Livro, Revista, DVD, Quadro) que herdem da classe abstrata Item e implementem a interface Emprestável. Implemente o método calcularMulta(int diasAtraso) em cada classe concreta de acordo com a regra específica de cada tipo de item. Implemente um método toString() na classe Item que exiba as informações básicas do item. Sobrescreva esse método nas classes concretas para exibir também as informações específicas de cada tipo de item.
+Classes Concretas: Crie classes concretas para cada tipo de item (`Livro`, `Revista`, `DVD`, `Quadro`) que herdem da classe abstrata Item e implementem a interface Emprestável. Implemente o método `calcularMulta(int diasAtraso)` em cada classe concreta de acordo com a regra específica de cada tipo de item. Implemente um método `toString()` na classe Item que exiba as informações básicas do item. Sobrescreva esse método nas classes concretas para exibir também as informações específicas de cada tipo de item.
 
 Classe Principal: Crie uma classe principal para testar o sistema, instanciando objetos de diferentes tipos de itens, realizando empréstimos e devoluções e calculando as multas por atraso.
 

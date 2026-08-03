@@ -2,6 +2,8 @@
 article: false
 ---
 
+[^jai_generics_2014]: Jai, Generics class Java, W3schools, https://www.w3schools.blog/generics-class-java
+
 [^Ascencio]: Ascencio, A. and Campos, E., 2008. Fundamentos Da Programação De Computadores. São Paulo: Pearson Prentice Hall.
 
 [^caelumoo]: Caelum. Java e Orientação a Objetos - Curso fj-11.

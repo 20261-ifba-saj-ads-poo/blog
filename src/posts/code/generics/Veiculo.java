@@ -1,8 +1,8 @@
-public abstract class Veiculo<T> {
+public abstract class Veiculo {
     private String modelo;
-    private T motor;
+    private Motor motor;
 
-    public Veiculo(String modelo, T motor) {
+    public Veiculo(String modelo, Motor motor) {
         this.modelo = modelo;
         this.motor = motor;
     }
@@ -11,7 +11,7 @@ public abstract class Veiculo<T> {
         return modelo;
     }
 
-    public T getMotor() {
+    public Motor getMotor() {
         return motor;
     }
 
