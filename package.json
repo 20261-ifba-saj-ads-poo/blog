@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@mathjax/src": "^4.1.1",
+    "esbuild": "^0.28.1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-plantuml": "^1.4.1",
     "markdown-it-table-captions": "^1.0.4"
