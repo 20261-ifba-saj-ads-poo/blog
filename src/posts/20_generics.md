@@ -124,7 +124,6 @@ Com generics, informamos o tipo desejado entre corchetes angulares `<T>`:
 | **Flexibilidade** | Aceita qualquer objeto, sem controle de tipo. | Aceita tipos específicos parametrizados. |
 | **Detecção de Erros** | Erros em runtime (`ClassCastException`). | Erros de compilação imediatos na IDE. |
 
----
 
 ### 2.3 Criando Classes Genéricas
 
@@ -381,6 +380,7 @@ public class VerificadorTipo<T> {
 }
 ```
 
+
 ##### 2. Contornando a criação de objetos (`new T()` ➔ `Class<T>.getDeclaredConstructor()`):
 ```java
 public T criarNovaInstancia(Class<T> clazz) throws Exception {
@@ -388,8 +388,6 @@ public T criarNovaInstancia(Class<T> clazz) throws Exception {
     return clazz.getDeclaredConstructor().newInstance();
 }
 ```
-
----
 
 ## Referências
 

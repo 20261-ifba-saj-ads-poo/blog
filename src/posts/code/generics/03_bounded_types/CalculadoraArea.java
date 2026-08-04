@@ -1,23 +1,11 @@
-import java.util.ArrayList;
 import java.util.List;
 
-public class CalculadoraArea<T extends FormaGeometrica> {
-    private List<T> formas;
+public class CalculadoraArea {
 
-    public CalculadoraArea() {
-        this.formas = new ArrayList<>();
-    }
-
-    public CalculadoraArea(T formaInicial) {
-        this();
-        this.formas.add(formaInicial);
-    }
-
-    public void adicionarForma(T forma) {
-        formas.add(forma);
-    }
-
-    public double calcular() {
-        return formas.stream().mapToDouble(FormaGeometrica::calcularArea).sum();
+    // O método aceita uma lista de QUALQUER tipo, desde que implemente FormaGeometrica
+    public double calcularAreaTotal(List<? extends FormaGeometrica> formas) {
+        return formas.stream()
+                .mapToDouble(FormaGeometrica::calcularArea)
+                .sum();
     }
 }
