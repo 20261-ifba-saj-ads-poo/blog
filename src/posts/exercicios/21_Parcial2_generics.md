@@ -51,6 +51,45 @@ A comunicação Negócio→Dados acontece pela interface `GenericDAO`, passada n
 @[code](../code/generics/parcialTrab/UsuarioController.java)
 
 
+<figure>
+
+```plantuml
+
+@startuml
+abstract class AbstractModel<T>{
+ T id
+}
+
+class Usuario extends AbstractModel<Long>{
+ String nome
+}
+
+class Produto extends AbstractModel<Long>{
+ String nome
+}
+
+interface Servico<T>{
+ int salvar(T entidade)
+ boolean verificar(T entidade)
+}
+
+abstract class GenericServiceImpl<T> implements Servico<T>{
+ int salvar(T usuario)
+}
+
+class ServicoUsuario extends GenericServiceImpl<Usuario>{
+ boolean verificar(Usuario usuario)
+}
+
+class ServicoProduto extends GenericServiceImpl<Produto>{
+ boolean verificar(Produto usuario)
+}
+
+@enduml
+```
+
+<figcaption>Exemplificação de como deve ficar a relação entre as classes da camada de modelo e camada de serviço.</figcaption>
+</figure>
 
 Defina um conjunto de comportamentos para fazer a inserção (create), consulta por `id` (read), alteração (update) e exclusão (delete) de qualquer classe da camada de modelo. Essas são as operações CRUD.
 
