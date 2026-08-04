@@ -31,8 +31,9 @@ jobs:
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          bun run docs:build > src/.vuepress/dist/.nojekyll
+        run: |
+          bun run docs:build
+          touch src/.vuepress/dist/.nojekyll
 
       # Faz o deploy para o GitHub Pages
       - name: Deploy Docs
