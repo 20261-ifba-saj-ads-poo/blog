@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public abstract class AbstractModel<T> {
     private T id;
@@ -27,5 +28,25 @@ public abstract class AbstractModel<T> {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        AbstractModel<?> death = (AbstractModel<?>) o;
+        return Objects.equals(id, death.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "{id=" + id + "}";
     }
 }

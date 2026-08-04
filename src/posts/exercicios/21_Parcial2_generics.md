@@ -65,6 +65,10 @@ Criando uma classe filha de DAO genérico para acrescentar funcionalidades espec
 
 @[code](../code/generics/parcialTrab/UsuarioDAO.java)
 
+@[code](../code/generics/parcialTrab/IdGenerator.java)
+
+
+
 ## Entregar
 
 Entregar a camada de modelo atualizada bem como a comunicação entre o Controler, Servico e DAO.
