@@ -16,8 +16,7 @@ public class GenericDAOImpl<T extends AbstractModel<ID>, ID> implements GenericD
     public ID salvar(T entidade) {
         ID novoId = IdGenerator.gerarNovoId(tipoIdClass);
         entidade.setId(novoId);
-        entidade.setCreatedAt(LocalDateTime.now());
-        entidade.setUpdatedAt(LocalDateTime.now());
+        entidade.setCreatedAt(LocalDateTime.now());        
         bancoDeDados.put(entidade.getId(), entidade);
         return novoId;
     }

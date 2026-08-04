@@ -16,38 +16,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          # if your docs needs submodules, uncomment the following line
+          fetch-depth: 0 # se os seus docs precisam de submodules, descomente a linha seguinte
           # submodules: true
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v6 
-        with:
-          version: 11 
-          run_install: true
+      # Configura o Bun e gerencia o cache automaticamente
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
+      # Instala as dependências usando o Bun
       - name: Install Deps
-        run: |
-          corepack enable
-          pnpm install --no-frozen-lockfile
+        run: bun install
 
+      # Executa o build com o Bun e gera o arquivo .nojekyll
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          pnpm run docs:build
-          > src\.vuepress\dist\.nojekyll
+          bun run docs:build > src/.vuepress/dist/.nojekyll
 
+      # Faz o deploy para o GitHub Pages
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # Deploy Docs
           branch: gh-pages
           folder: src/.vuepress/dist
