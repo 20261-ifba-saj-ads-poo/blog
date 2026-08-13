@@ -1,0 +1,46 @@
+---
+title: Exceções em POO
+---
+
+
+``` java
+class TesteErro {
+    public static void main(String[] args) {
+        System.out.println("inicio do main");
+        metodo1();
+        System.out.println("fim do main");
+    }
+    static void metodo1() {
+        System.out.println("inicio do metodo1");
+        metodo2();
+        System.out.println("fim do metodo1");
+    }
+    static void metodo2() {
+        System.out.println("inicio do metodo2");
+        int[] array = new int[10];
+        for (int i = 0; i < 10; i++) {
+            array[i] = i;
+            System.out.println(i);
+        }
+        System.out.println("fim do metodo2");
+    }
+}
+TesteErro.main(new String[]{});
+```
+
+    inicio do main
+    inicio do metodo1
+    inicio do metodo2
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    fim do metodo2
+    fim do metodo1
+    fim do main

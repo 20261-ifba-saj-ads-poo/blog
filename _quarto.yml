@@ -1,0 +1,7 @@
+project:
+  type: default
+
+format:
+  gfm:
+    keep-yaml: true
+    variant: +yaml_metadata_block

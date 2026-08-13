@@ -14,9 +14,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "docs:prebuild": "quarto render includes/javarun/*.qmd --to gfm",
     "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:dev": "vuepress-vite dev src",
+    "docs:dev": "bun run docs:prebuild && vuepress-vite dev src",
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {

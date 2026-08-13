@@ -9,13 +9,12 @@ order: 22
 ---
 # Exceptions
 
-Considerando o que foi visto em [Pilha de execução](./02_Codificando_JAVA.md#pilha-de-execucao).
+Considerando o que foi visto em [Pilha de execução](./04_Codificando_JAVA.md#pilha-de-execucao).
 
 Quando um exceção (situação excepcional) ocorre, o JVM entra em estado de alerta e procura dento do metodo se existe algum tratamento especial para o problema.
 
-@[code](./code/exception/TesteErro.java)
+<!-- @include: ../../includes/javarun/22_ExceptionsTeste.md -->
 
-<codapi-snippet sandbox="java" editor="basic"></codapi-snippet>
 
 - Como o `metodo2` não tem nenhum tratamento a JVM interrompe sua execução e volta um nível na pilha e verifica novamente.
 - Como o `metodo1` também não faz nenhum tratamento a JVM sobe mais um nivel até chegar no `main`

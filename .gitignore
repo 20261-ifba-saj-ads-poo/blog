@@ -5,3 +5,6 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 pnpm-workspace.yaml
 bun.lock
+
+/.quarto/
+**/*.quarto_ipynb

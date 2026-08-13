@@ -10,7 +10,7 @@ category:
 
 # Exercícios sobre Exception (IllegalArgumentException, SaldoInsufucienteException)
 
-Considerando o exercicio [Modelagem Sistema Banco](./15_exercicio_Polimorfismo1.md)
+Considerando o exercicio [Modelagem Sistema Banco](./18_exercicio_Polimorfismo1.md)
 
 1. Na classe `Operacao`, modifique o construtor para ele lançar uma exception chamada `IllegalArgumentException` caso o valor da operação seja negativo. A `IllegalArgumentException` é uma exception  que já faz parte da biblioteca do Java.
     1. Adicione o try/catch para tratar o erro
