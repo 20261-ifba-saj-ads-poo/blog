@@ -18,3 +18,12 @@ Crie um código que atenda a seguinte descrição:
 1. Se a autenticação não for bem-sucedida a exceção `AutenticacaoInvalidaException` é lançada com uma mensagem de erro apropriada ("Usuario (login tal) não foi encontrado ou a senha está errada").
 1. No método `main`, um exemplo de autenticação é realizado chamando o método `autenticar` do `BancoDeUsuarios` com um usuário válido. Se a autenticação for bem-sucedida, será exibida uma mensagem indicando que o usuário foi autenticado. Caso contrário, a mensagem de erro será exibida.
 
+
+::: details 
+
+
+@[code](./code/exception/AutenticacaoInvalidaException.java)
+@[code](./code/exception/UsuarioService.java)
+@[code](./code/exception/LoginController.java)
+
+::: 
