@@ -6,24 +6,16 @@ public class LoginController  {
 
     @FXML
     void fazerLogin(ActionEvent event) {
-        String email = txtUsuario.getText(); // Usando como e-mail
-        String senha = txtSenha.getText();
-
-        if (email.isEmpty() || senha.isEmpty()) {
-            mostrarAlerta(Alert.AlertType.WARNING, "Aviso", "Preencha o e-mail e a senha.");
-            return;
-        }
-
-        // Chama a validação
-        Usuario usuarioAutenticado;
         try {
-            usuarioAutenticado = UsuarioService.getInstance().autenticar(email, senha);
-            App.setUsuarioLogado(usuarioAutenticado);
+            App.setUsuarioLogado(UsuarioService.getInstance().autenticar(txtUsuario.getText(), txtSenha.getText()));
             App.setRoot("menuPrincipal");
-
+        } catch (IllegalArgumentException e) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Erro", e.getMessage());
         } catch (AutenticacaoInvalidaException e) {
-            mostrarAlerta(Alert.AlertType.ERROR, "Acesso Negado", e.getMessage());           
+            mostrarAlerta(Alert.AlertType.ERROR, "Acesso Negado", e.getMessage());
+        } catch (IOException e) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Erro", "Não foi possível carregar o sistema.");
         }
-            
+
     }
 }

@@ -16,3 +16,12 @@ Considerando o exercicio [Modelagem Sistema Banco](./18_exercicio_Polimorfismo1.
     1. Adicione o try/catch para tratar o erro
     2. Ao lançar a `IllegalArgumentException`, passe via construtor uma mensagem a ser exibida. Lembre que a String recebida como parâmetro é acessível depois via o método getMessage() herdado por todas as Exceptions
 2. Modificar o sistema de controle de contas correntes para lançar uma exceção de `SaldoInsufucienteException` caso o valor de saque seja maior que o saldo disponível
+
+
+::: details 
+
+
+@[code](./code/exception/UsuarioService.java)
+@[code](./code/exception/LoginController.java)
+
+::: 
