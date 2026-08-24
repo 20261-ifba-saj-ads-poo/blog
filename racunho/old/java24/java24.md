@@ -39,7 +39,7 @@ import java.util.concurrent.StructuredTaskScope;
 
 // Exemplo conceitual (pode requerer configurações adicionais ou APIs específicas)
 // Este código é simplificado para ilustração.
-/*
+
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
     Future<String> task1 = scope.fork(() -> {
         // Simula uma tarefa
@@ -63,5 +63,5 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 } catch (Exception e) {
     System.err.println("Uma tarefa falhou: " + e.getMessage());
 }
-*/
+
 ```
