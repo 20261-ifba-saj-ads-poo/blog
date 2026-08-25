@@ -8,13 +8,13 @@ class ListExample {
         for (int i = 1; i <= n; i++){
             arrli.add(i);
         }
-        System.out.println(arrli);
+        IO.println(arrli);
         arrli.remove(3);
-        System.out.println(arrli);
+        IO.println(arrli);
         arrli.set(1, 10);
-        System.out.println(arrli);
+        IO.println(arrli);
         for (Integer integer : arrli.subList(1, 3)) {
-            System.out.print(integer + " ");
+            IO.print(integer + " ");
         }
 
     }

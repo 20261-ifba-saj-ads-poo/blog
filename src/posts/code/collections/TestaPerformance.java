@@ -6,18 +6,18 @@ import java.util.HashSet;
 
 public class TestaPerformance {
     public static void main(String[] args) {
-        System.out.println("Iniciando...");
-        Collection<Integer> teste = new HashSet();
+        IO.println("Iniciando...");
+        Collection<Integer> teste = new HashSet<>();
         Instant inicio = Instant.now();
-        int total = 300000;
+        int total = 3000000;
         for (int i = 0; i < total; i++) {
             teste.add(i);
         }
-        //for (int i = 0; i < total; i++) {
-        //    teste.contains(i);
-        //}
+        for (int i = 0; i < total; i++) {
+            teste.contains(i);
+        }
         Instant fim = Instant.now();
         Duration tempo = Duration.between(inicio, fim);
-        System.out.println("Tempo gasto: " + tempo.toMillis() + " ms");
+        IO.println("Tempo gasto: " + tempo.toMillis() + " ms");
     }
 }

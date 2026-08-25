@@ -1,15 +1,18 @@
-import java.sql.DriverManager;
-import java.sql.SQLException;
+void main() {
+    Properties settings = new Properties();
 
-void main() throws SQLException {
-    Properties config = new Properties();
-    config.setProperty("database.login", "scott");
-    config.setProperty("database.password", "tiger");
-    config.setProperty("database.url", "jdbc:mysql:/localhost/teste");
-    // muitas linhas depois...
-    String login = config.getProperty("database.login");
-    String password = config.getProperty("database.password");
-    String url = config.getProperty("database.url");
-    DriverManager.getConnection(url, login, password);
+    try (FileInputStream input = new FileInputStream("appsettings.properties")) {
+        settings.load(input);
+
+        String theme = settings.getProperty("theme", "light"); // Default to 'light'
+        String language = settings.getProperty("language", "en"); // Default to 'en'
+        int timeout = Integer.parseInt(settings.getProperty("timeout", "60")); // Default to 60 seconds
+
+        IO.println("Theme: " + theme);
+        IO.println("Language: " + language);
+        IO.println("Timeout: " + timeout + " seconds");
+    } catch (IOException | NumberFormatException e) {
+        IO.println("Error loading application settings: " + e.getMessage());
+    }
 
 }

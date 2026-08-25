@@ -9,7 +9,7 @@ public class TestaPerformanceDeAdicionarNaPrimeiraPosicao {
         System.out.println("Iniciando...");
         Instant inicio = Instant.now();
         // trocar depois por ArrayList
-        List<Integer> teste = new LinkedList<>();
+        List<Integer> teste = new ArrayList<>();
         for (int i = 0; i < 300000; i++) {
             teste.add(0, i);
         }

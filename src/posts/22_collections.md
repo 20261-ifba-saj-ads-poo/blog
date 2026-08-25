@@ -290,8 +290,9 @@ O método `keySet()` retorna um `Set` com as chaves daquele mapa e o método `va
 ### Properties
 
 Um mapa importante é a tradicional classe `Properties`,que mapeia strings e é muito utilizada para a configuração de aplicações.
-A `Properties` possui, também, métodos para ler e gravar o mapeamento com base em um arquivo texto,
-facilitando muito a sua persistência.
+A `Properties` possui, também, métodos para ler e gravar o mapeamento com base em um arquivo texto, facilitando muito a sua persistência.
+
+@[code](./code/collections/appsettings.properties)
 
 @[code](./code/collections/PropertiesExemplo.java)
 
