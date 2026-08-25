@@ -28,11 +28,11 @@ public class AppConta {
         Thread.sleep(2000);
         LOGGER.info("conta saldo:" + conta.getSaldo());
         LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
-        Thread.sleep(2000);
+        Thread.sleep(20000);
         LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
-        Thread.sleep(2000);
+        Thread.sleep(20000);
         LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
-        Thread.sleep(2000);
+        Thread.sleep(20000);
         LOGGER.info("contaSynchronized saldo:" + contaSynchronized.getSaldo());
     }
 

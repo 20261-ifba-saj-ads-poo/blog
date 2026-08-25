@@ -369,7 +369,15 @@ Runnable runnable = new MinhaRunnable();
 Thread thread = Thread.ofVirtual().start(runnable);
 ```
 
+## exemplo com greenfoot
 
+@[code](./code/threads/greenfoot/MeuMundo.java)
+
+@[code](./code/threads/greenfoot/ClienteHandler.java)
+
+@[code](./code/threads/greenfoot/Personagem.java)
+
+@[code](./code/threads/greenfoot/ClienteControle.java)
 
 
 # Links w3schools
