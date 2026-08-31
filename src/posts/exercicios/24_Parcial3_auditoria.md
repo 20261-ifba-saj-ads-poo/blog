@@ -1,18 +1,12 @@
 ---
 icon: dumbbell
 date: 2026-08-25 19:50:00.00 -3
-tag:
-  - heranca
 category:
   - trabalho
-  - exercicio
-  - entrega
-order: 25
+order: 26
 ---
 
-# Trabalho Parcial 3
+# Codigo Auditoria
 
-Criar uma tela de Auditoria
-
-[Link](https://classroom.github.com/a/BCAnRDqX)
+[Link](https://github.com/20261-ifba-saj-ads-poo/trabalho-auditoria)
 
