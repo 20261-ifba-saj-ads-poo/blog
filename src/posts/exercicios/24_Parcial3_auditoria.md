@@ -25,7 +25,7 @@ Realizar a **entrega completa do trabalho**, incorporando as seguintes funcional
 
 3. **Tela de Auditoria**
 
-   - O usuário com perfil **ADMIN*- deverá ter acesso a uma tela de auditoria.
+   - O usuário com perfil **ADMIN** deverá ter acesso a uma tela de auditoria.
    - Nessa tela deverá ser possível consultar, para cada registro:
 
      - **quem realizou a inclusão do registro**;
