@@ -6,13 +6,12 @@ tag:
 category:
   - trabalho
   - exercicio
-  - entrega
-order: 25
+order: 26
 ---
 
-# Trabalho Parcial 3
+# Código Auditoria
 
 Criar uma tela de Auditoria
 
-[Link](https://classroom.github.com/a/BCAnRDqX)
+[Link](https://github.com/20261-ifba-saj-ads-poo/trabalho-auditoria)
 

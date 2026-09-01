@@ -6,7 +6,7 @@ category:
 order: 25
 ---
 
-# Trabaho - Entrega final
+# Trabalho - Entrega final
 
 Realizar a **entrega completa do trabalho**, incorporando as seguintes funcionalidades:
 
