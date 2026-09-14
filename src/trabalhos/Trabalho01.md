@@ -39,7 +39,7 @@ box "Persistência\n<Entity>" #yellow
 end box
 
 Usuario -> TelaEmprestimo : Preenche dados do empréstimo
-TelaEmprestimo -> ServicoEmprestimo : solicitarEmprestimo(livroId, membroId, dataDevolucao)
+TelaEmprestimo -> ServicoEmprestimo : solicitarEmprestimo(emprestimo)
 ServicoEmprestimo -> ServicoEmprestimo : validarLimiteEmprestimos()
 ServicoEmprestimo -> ServicoEmprestimo : validarDataDevolucao()
 alt regras atendidas
@@ -68,7 +68,3 @@ end
 2. **README** com instruções de compilação e execução (`mvn clean package && java -jar target/biblioteca.jar`).
 3. Diagrama de classes (UML) que mostre as entidades (`Livro`, `Membro`, `Emprestimo`) e as camadas.
 4. Diagrama de sequência (como o acima) para o caso de uso **Registrar Empréstimo**.
-5. **Testes unitários** (JUnit) que comprovem:
-   - Sucesso ao registrar um empréstimo quando as regras são atendidas.
-   - Falha ao tentar registrar um sexto empréstimo para o mesmo membro.
-   - Falha ao informar data de devolução anterior à data de empréstimo.

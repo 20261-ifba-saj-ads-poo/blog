@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioConsulta
 end box
 Usuario -> TelaAgendamento : preencher dados da consulta
-TelaAgendamento -> ServicoAgendamento : solicitarAgendamento(...)
+TelaAgendamento -> ServicoAgendamento : solicitarAgendamento(consulta)
 ServicoAgendamento -> ServicoAgendamento : validarConflitoHorario()
 ServicoAgendamento -> ServicoAgendamento : validarLimiteDiario()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Paciente`, `Medico`, `Consulta`).  
-4. Diagrama de sequência (acima) para o caso de uso **Agendar Consulta**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Agendamento bem‑sucedido quando não há conflito e limite diário não ultrapassado.
-   - Falha ao agendar horário já ocupado.
-   - Falha ao ultrapassar 20 consultas diárias para o mesmo médico.
+4. Diagrama de sequência (acima) para o caso de uso **Agendar Consulta**.

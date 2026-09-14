@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioAtividade
 end box
 Usuario -> TelaAtividade : cadastrar competição/inscrição
-TelaAtividade -> ServicoAtividade : processar(...)
+TelaAtividade -> ServicoAtividade : processar(inscricao)
 ServicoAtividade -> ServicoAtividade : validarLimiteParticipantes()
 ServicoAtividade -> ServicoAtividade : validarInscricaoUnica()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Competicao`, `Atleta`, `Inscricao`).  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar Inscrição**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Inscrição bem‑sucedida quando há vagas e atleta ainda não inscrito.
-   - Falha ao tentar inscrever quando a competição está completa.
-   - Falha ao inscrever o mesmo atleta duas vezes na mesma competição.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar Inscrição**.

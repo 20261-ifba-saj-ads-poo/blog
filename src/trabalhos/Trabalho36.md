@@ -11,7 +11,7 @@ article: false
 | Camada | Funcionalidade |
 |--------|----------------|
 | **Apresentação (JavaFX)** | Tela de cadastro de bens, atribuição a órgãos, agendamento de manutenção, relatório de disponibilidade.
-| **Negócio** | • Validar documento de propriedade (matrícula, docto). <br>• Aplicar regras de disponibilidade (não pode ter outro bem no mesmo local). <br>• Verificar vencimento de inspeções obrigatórias.
+| **Negócio** | • Validar documento de propriedade (matrícula, documento). <br>• Aplicar regras de disponibilidade (não pode ter outro bem no mesmo local). <br>• Verificar vencimento de inspeções obrigatórias.
 | **Dados** | • Armazenar bens em `ArrayList`, relacionamentos em `HashMap`. <br>• Operações CRUD.
 
 ## Regras de Negócio (3)
@@ -27,7 +27,7 @@ article: false
 5. Camada de Apresentação exibe resultado.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -40,9 +40,9 @@ box "Persistência" #yellow
     participant RepositorioBem
 end box
 Usuario -> TelaBem : cadastra bem (local, doc)
-TelaBem -> ServicoBens : registrarBem(dados)
+TelaBem -> ServicoBens : registrarBem(bem)
 ServicoBens -> ServicoBens : validarLocalUnico()
-ServicoBens -> ServicoBens : validarInspencao()
+ServicoBens -> ServicoBens : validarInspecao()
 ServicoBens -> ServicoBens : validarDocumento()
 alt regras ok
     ServicoBens -> RepositorioBem : salvarBem()
@@ -68,6 +68,5 @@ end
 ## Entregáveis
 1. Projeto Java (Maven/Gradle) com pacotes `presentation`, `business`, `data`.
 2. README com instruções.
-3. Diagrama de classes (`Bem`, `Local`, `Inspencao`).
+3. Diagrama de classes (`Bem`, `Local`, `Inspecao`).
 4. Diagrama de sequência (registrar bem).
-5. Testes JUnit: local já ocupado rejeitado, inspeção vencida alertada, documento incompleto bloqueado.

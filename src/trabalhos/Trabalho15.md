@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioReserva
 end box
 Cliente -> TelaReservaViagem : buscar e selecionar voo(s)
-TelaReservaViagem -> ServicoReservaViagem : solicitarReserva(...)
+TelaReservaViagem -> ServicoReservaViagem : solicitarReserva(reservaViagem)
 ServicoReservaViagem -> ServicoReservaViagem : validarDataRetorno()
 ServicoReservaViagem -> ServicoReservaViagem : validarAssentosDisponiveis()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Voo`, `ReservaViagem`).  
-4. Diagrama de sequência (acima) para o caso de uso **Registrar Reserva de Viagem**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Reserva bem‑sucedida quando a data de retorno é válida e há assentos disponíveis.
-   - Falha ao registrar retorno anterior à data de ida.
-   - Falha ao reservar mais assentos que a disponibilidade do voo.
+4. Diagrama de sequência (acima) para o caso de uso **Registrar Reserva de Viagem**.

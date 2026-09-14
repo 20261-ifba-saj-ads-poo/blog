@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioEquipamento
 end box
 Usuario -> TelaInventario : cadastrar/atualizar equipamento
-TelaInventario -> ServicoInventario : processar(...)
+TelaInventario -> ServicoInventario : processar(equipamento)
 ServicoInventario -> ServicoInventario : validarNumeroSerie()
 ServicoInventario -> ServicoInventario : validarDataAquisicao()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando a entidade `Equipamento`.  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Atualizar Equipamento**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com número de série único e data válida.
-   - Falha ao cadastrar número de série duplicado.
-   - Falha ao informar data de aquisição futura.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Atualizar Equipamento**.

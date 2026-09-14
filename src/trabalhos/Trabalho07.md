@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioHorasExtras
 end box
 Usuario -> TelaHorasExtras : preencher registro
-TelaHorasExtras -> ServicoHorasExtras : registrarHoras(...)
+TelaHorasExtras -> ServicoHorasExtras : registrarHoras(horasExtras)
 ServicoHorasExtras -> ServicoHorasExtras : validarLimiteDiario()
 ServicoHorasExtras -> ServicoHorasExtras : validarDataPassada()
 alt regras atendidas
@@ -67,4 +67,3 @@ end
 2. **README** com instruções de compilação e execução.
 3. Diagrama de classes (UML) mostrando as entidades (`Funcionario`, `HorasExtras`).
 4. Diagrama de sequência (acima) para o caso de uso **Registrar Horas Extras**.
-5. **Testes unitários** (JUnit) que comprovem sucesso quando as regras são atendidas e falha nas duas situações de violação.

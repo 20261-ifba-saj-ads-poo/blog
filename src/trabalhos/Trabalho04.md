@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioInscricao
 end box
 Usuario -> TelaInscricao : Preenche dados da inscrição
-TelaInscricao -> ServicoInscricao : solicitarInscricao(eventoId, email, nome)
+TelaInscricao -> ServicoInscricao : solicitarInscricao(inscricao)
 ServicoInscricao -> ServicoInscricao : validarCapacidade()
 ServicoInscricao -> ServicoInscricao : validarEmailUnico()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Evento`, `Participante`).  
-4. Diagrama de sequência (como acima) para o caso de uso **Registrar Inscrição**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Inscrição bem‑sucedida quando há vagas e e‑mail ainda não cadastrado.
-   - Falha ao inscrever quando o evento está lotado.
-   - Falha ao inscrever o mesmo e‑mail duas vezes no mesmo evento.
+4. Diagrama de sequência (como acima) para o caso de uso **Registrar Inscrição**.

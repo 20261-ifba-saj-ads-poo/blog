@@ -22,11 +22,11 @@ Uma indústria precisa de um sistema para registrar inspeções de qualidade, ge
 1. Usuário preenche formulário de inspeção.
 2. Camada de Apresentação envia dados ao Serviço de Qualidade.
 3. Serviço verifica limites e assinatura.
-4. Se valido, salva e calcula métricas; caso contrário, devolve erro.
+4. Se válido, salva e calcula métricas; caso contrário, devolve erro.
 5. Interface exibe resultado.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -39,10 +39,10 @@ box "Persistência" #yellow
     participant RepositorioInspecao
 end box
 Usuario -> TelaInspecao : preenche inspeção (valor, inspetor)
-TelaInspecao -> ServicoQualidade : registrarInspecao(itemId, valor, inspetor)
+TelaInspecao -> ServicoQualidade : registrarInspecao(inspecao)
 ServicoQualidade -> ServicoQualidade : validarLimites(valor)
 ServicoQualidade -> ServicoQualidade : validarInspetor(inspetor)
-alt valido e assinatura presente
+alt válido e assinatura presente
     ServicoQualidade -> RepositorioInspecao : salvarInspecao()
     RepositorioInspecao --> ServicoQualidade : sucesso
     ServicoQualidade --> TelaInspecao : registro salvo
@@ -67,4 +67,3 @@ end
 2. README com instruções de execução.
 3. Diagrama de classes (`Inspecao`, `Inspetor`).
 4. Diagrama de sequência (registro de inspeção).
-5. Testes JUnit: inspeção dentro dos limites aprovada, fora dos limites marcada como não-conforme, falta de assinatura resulta em erro.

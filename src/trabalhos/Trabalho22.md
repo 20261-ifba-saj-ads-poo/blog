@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioCurso
 end box
 Usuario -> TelaCursoOnline : cadastrar/inscrever/altera progresso
-TelaCursoOnline -> ServicoCursoOnline : processar(...)
+TelaCursoOnline -> ServicoCursoOnline : processar(inscricao)
 ServicoCursoOnline -> ServicoCursoOnline : validarLimiteVagas()
 ServicoCursoOnline -> ServicoCursoOnline : validarProgresso()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Curso`, `Aluno`, `Inscricao`).  
-4. Diagrama de sequência (acima) para o caso de uso **Inscrever Aluno / Atualizar Progresso**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Inscrição bem‑sucedida quando há vagas disponíveis.
-   - Falha ao inscrever quando o curso está completo.
-   - Falha ao tentar reduzir o percentual de progresso já registrado.
+4. Diagrama de sequência (acima) para o caso de uso **Inscrever Aluno / Atualizar Progresso**.

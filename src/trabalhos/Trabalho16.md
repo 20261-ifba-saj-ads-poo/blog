@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioDocumento
 end box
 Usuario -> TelaDocumento : cadastrar/buscar documento
-TelaDocumento -> ServicoDocumento : processar(...)
+TelaDocumento -> ServicoDocumento : processar(documento)
 ServicoDocumento -> ServicoDocumento : validarNomeUnico()
 ServicoDocumento -> ServicoDocumento : validarDataArquivamento()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando a entidade `Documento`.  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Buscar Documento**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com nome único e data válida.
-   - Falha ao cadastrar nome duplicado.
-   - Falha ao informar data de arquivamento futura.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Buscar Documento**.

@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioTransacao
 end box
 Usuario -> TelaFinanceiro : cadastrar transação
-TelaFinanceiro -> ServicoFinanceiro : processar(...)
+TelaFinanceiro -> ServicoFinanceiro : processar(transacao)
 ServicoFinanceiro -> ServicoFinanceiro : validarValorPositivo()
 ServicoFinanceiro -> ServicoFinanceiro : validarCategoria()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Transacao`, `Categoria`).  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar Transação**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido quando valor > 0 e categoria informada.
-   - Falha ao cadastrar valor zero ou negativo.
-   - Falha ao omitir a categoria.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar Transação**.

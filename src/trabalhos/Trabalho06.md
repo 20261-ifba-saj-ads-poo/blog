@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioRegistro
 end box
 Usuario -> TelaEstacionamento : registrarEntradaSaida(...)
-TelaEstacionamento -> ServicoEstacionamento : processar(...)
+TelaEstacionamento -> ServicoEstacionamento : processar(registro)
 ServicoEstacionamento -> ServicoEstacionamento : validarPlacaUnica()
 ServicoEstacionamento -> ServicoEstacionamento : validarTempoMinimo()
 alt regras atendidas
@@ -67,7 +67,3 @@ end
 2. **README** com instruções de compilação e execução.
 3. Diagrama de classes (UML) mostrando as entidades (`Vaga`, `Registro`).
 4. Diagrama de sequência (acima) para o caso de uso **Registrar Entrada/Saída**.
-5. **Testes unitários** (JUnit) que comprovem:
-   - Entrada bem‑sucedida quando a placa está livre.
-   - Falha ao registrar a mesma placa em outra vaga.
-   - Falha ao registrar saída antes de 15 minutos.

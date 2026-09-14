@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioCarrinho
 end box
 Cliente -> TelaCarrinho : adicionar/remover item
-TelaCarrinho -> ServicoCarrinho : processarItem(...)
+TelaCarrinho -> ServicoCarrinho : processarItem(itemCarrinho)
 ServicoCarrinho -> ServicoCarrinho : validarEstoque()
 ServicoCarrinho -> ServicoCarrinho : validarLimiteItens()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Produto`, `ItemCarrinho`).  
-4. Diagrama de sequência (acima) para o caso de uso **Adicionar/Remover Item do Carrinho**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Adição bem‑sucedida quando há estoque suficiente e limite de itens não ultrapassado.
-   - Falha ao adicionar quantidade maior que o estoque.
-   - Falha ao exceder 20 itens diferentes no carrinho.
+4. Diagrama de sequência (acima) para o caso de uso **Adicionar/Remover Item do Carrinho**.

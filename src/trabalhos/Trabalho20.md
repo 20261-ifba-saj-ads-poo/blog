@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioReserva
 end box
 Cliente -> TelaReservaHotel : cadastrar reserva
-TelaReservaHotel -> ServicoReservaHotel : processarReserva(...)
+TelaReservaHotel -> ServicoReservaHotel : processarReserva(reserva)
 ServicoReservaHotel -> ServicoReservaHotel : validarDisponibilidade()
 ServicoReservaHotel -> ServicoReservaHotel : validarDatas()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Quarto`, `Reserva`, `Hospede`).  
-4. Diagrama de sequência (acima) para o caso de uso **Registrar Reserva de Quarto**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Reserva bem‑sucedida quando o quarto está livre e as datas são válidas.
-   - Falha ao tentar reservar um quarto já ocupado no período solicitado.
-   - Falha ao registrar reserva com data de check‑out anterior à data de check‑in.
+4. Diagrama de sequência (acima) para o caso de uso **Registrar Reserva de Quarto**.

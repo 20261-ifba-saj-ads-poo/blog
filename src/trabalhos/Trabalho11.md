@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioTransporte
 end box
 Usuario -> TelaTransporte : cadastrar/associar
-TelaTransporte -> ServicoTransporte : processar(...)
+TelaTransporte -> ServicoTransporte : processar(associacao)
 ServicoTransporte -> ServicoTransporte : validarPlacaUnica()
 ServicoTransporte -> ServicoTransporte : validarCNH()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Veiculo`, `Motorista`, `Associacao`).  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Associar Veículo**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com placa única.
-   - Falha ao cadastrar placa duplicada.
-   - Falha ao associar motorista com CNH vencida.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Associar Veículo**.

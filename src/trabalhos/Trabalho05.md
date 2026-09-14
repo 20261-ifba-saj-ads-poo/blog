@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioVenda
 end box
 Usuario -> TelaVenda : Preenche dados
-TelaVenda -> ServicoVenda : registrarVenda(...)
+TelaVenda -> ServicoVenda : registrarVenda(venda)
 ServicoVenda -> ServicoVenda : validarCodigoUnico()
 ServicoVenda -> ServicoVenda : validarEstoque()
 alt regras atendidas
@@ -66,5 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Produto`, `Venda`).  
-4. Diagrama de sequência (como acima) para o caso de uso **Registrar Venda**.  
-5. **Testes unitários** (JUnit) que comprovem sucesso quando as regras são atendidas e falha quando cada regra é violada.
+4. Diagrama de sequência (como acima) para o caso de uso **Registrar Venda**.

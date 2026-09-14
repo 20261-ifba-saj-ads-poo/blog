@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioAcesso
 end box
 Usuario -> TelaAcesso : cadastrar/usar cartão
-TelaAcesso -> ServicoAcesso : processarCartao(numero, validade)
+TelaAcesso -> ServicoAcesso : registrarAcesso(acesso)
 ServicoAcesso -> ServicoAcesso : validarCartaoUnico()
 ServicoAcesso -> ServicoAcesso : validarValidade()
 alt regras atendidas
@@ -67,7 +67,3 @@ end
 2. **README** com instruções de compilação e execução.
 3. Diagrama de classes (UML) mostrando as entidades (`Cartao`, `Acesso`).
 4. Diagrama de sequência (acima) para o caso de uso **Registrar Acesso**.
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com número de cartão único.
-   - Falha ao cadastrar número duplicado.
-   - Falha ao registrar acesso com cartão expirado.

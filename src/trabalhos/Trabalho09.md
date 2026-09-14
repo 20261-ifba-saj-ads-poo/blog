@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioPedido
 end box
 Cliente -> TelaPedido : selecionar pratos e quantidades
-TelaPedido -> ServicoPedido : registrarPedido(...)
+TelaPedido -> ServicoPedido : registrarPedido(pedido)
 ServicoPedido -> ServicoPedido : validarEstoque()
 ServicoPedido -> ServicoPedido : validarTempoMaximo()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Prato`, `Pedido`).  
-4. Diagrama de sequência (como acima) para o caso de uso **Registrar Pedido**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Pedido bem‑sucedido quando há estoque suficiente e tempo dentro do limite.
-   - Falha ao solicitar quantidade maior que o estoque.
-   - Falha ao ultrapassar o tempo máximo de preparação.
+4. Diagrama de sequência (como acima) para o caso de uso **Registrar Pedido**.

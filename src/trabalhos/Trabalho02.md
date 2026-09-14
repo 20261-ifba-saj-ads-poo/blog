@@ -39,7 +39,7 @@ box "Persistência" #yellow
 end box
 
 Usuario -> TelaEstoque : Preenche dados
-TelaEstoque -> ServicoEstoque : registrarOperacao(...)
+TelaEstoque -> ServicoEstoque : registrarOperacao(operacao)
 ServicoEstoque -> ServicoEstoque : validarCodigoUnico()
 ServicoEstoque -> ServicoEstoque : validarEstoqueNaoNegativo()
 alt regras atendidas
@@ -68,7 +68,3 @@ end
 2. **README** com instruções de compilação e execução.
 3. Diagrama de classes (UML) mostrando as entidades (`Produto`, `Movimentacao`).
 4. Diagrama de sequência (como acima) para o caso de uso **Registrar Movimentação**.
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com código único.
-   - Falha ao cadastrar código duplicado.
-   - Falha ao registrar saída que deixaria o estoque negativo.

@@ -26,7 +26,7 @@ Empresas que utilizam fontes de energia renovável (solar, eólica, hidráulica)
 4. Resultado (dados ou alerta) é exibido ao usuário.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -39,13 +39,15 @@ box "Persistência" #yellow
     participant RepositorioEnergia
 end box
 Usuario -> TelaEnergia : solicitarDados()
-TelaEnergia -> ServicoEnergia : obterLeituras()
-ServicoEnergia -> ServicoEnergia : validarEficiência()
+TelaEnergia -> ServicoEnergia : registrarLeitura(leitura)
+ServicoEnergia -> ServicoEnergia : validarEficiencia()
 ServicoEnergia -> ServicoEnergia : validarLimiteCapacidade()
 ServicoEnergia -> ServicoEnergia : calcularReceita()
 ServicoEnergia -> RepositorioEnergia : salvarLeitura()
 RepositorioEnergia --> ServicoEnergia : sucesso
 ServicoEnergia --> TelaEnergia : dados/alerta
+TelaEnergia --> Usuario : exibir dados/alerta
+end
 @enduml
 ```
 
@@ -63,4 +65,3 @@ ServicoEnergia --> TelaEnergia : dados/alerta
 2. README com instruções de compilação e execução.
 3. Diagrama de classes (`Instalacao`, `Leitura`, `Relatorio`).
 4. Diagrama de sequência (obter dados).
-5. Testes JUnit: alerta por baixa eficiência, rejeição de geração acima da capacidade, cálculo correto de receita.

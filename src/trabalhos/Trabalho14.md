@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioOrdem
 end box
 Usuario -> TelaProducao : cadastrar/atualizar ordem
-TelaProducao -> ServicoProducao : processar(...)
+TelaProducao -> ServicoProducao : processar(ordem)
 ServicoProducao -> ServicoProducao : validarCodigoUnico()
 ServicoProducao -> ServicoProducao : validarQuantidade()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando a entidade `OrdemProducao`.  
-4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Atualizar Ordem**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro bem‑sucedido com código único e quantidade positiva.
-   - Falha ao cadastrar código duplicado.
-   - Falha ao informar quantidade zero ou negativa.
+4. Diagrama de sequência (acima) para o caso de uso **Cadastrar/Atualizar Ordem**.

@@ -8,7 +8,7 @@ article: false
 Equipes de desenvolvimento precisam de um sistema desktop para organizar tarefas, sprints e acompanhar o progresso de projetos ágeis. O sistema será desenvolvido em **Java**, usando **JavaFX** e seguindo a arquitetura em **três camadas**.
 
 ## Requisitos Funcionais
-| Camada | Funccionalidade |
+| Camada | Funcionalidade |
 |--------|----------------|
 | **Apresentação (JavaFX)** | Tela de cadastro de projetos, tela de criação de sprints, tela de adição/atualização de tarefas, quadro Kanban.
 | **Negócio** | • Validar datas de início/fim, prioridade, carga horária. <br>• Aplicar regras de negócio.
@@ -26,7 +26,7 @@ Equipes de desenvolvimento precisam de um sistema desktop para organizar tarefas
 5. Camada de Apresentação exibe resultado ao usuário.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -39,7 +39,7 @@ box "Persistência" #yellow
     participant RepositorioTarefa
 end box
 Usuario -> TelaProjeto : cria tarefa com estimativa
-TelaProjeto -> ServicoProjeto : criarTarefa(projetoId, horasEstimadas)
+TelaProjeto -> ServicoProjeto : criarTarefa(tarefa)
 ServicoProjeto -> ServicoProjeto : validarCargaHoraria()
 ServicoProjeto -> ServicoProjeto : validarSprintProjeto()
 alt regras atendidas
@@ -68,4 +68,3 @@ end
 2. README com instruções de compilação e execução.
 3. Diagrama de classes (`Projeto`, `Sprint`, `Tarefa`).
 4. Diagrama de sequência (criar tarefa).
-5. Testes JUnit: validar carga horária máxima, validar sprint dentro do projeto, erro em datas inválidas.

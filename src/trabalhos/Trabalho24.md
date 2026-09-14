@@ -39,7 +39,7 @@ box "Persistência" #yellow
 end box
 
 Usuario -> TelaEvento : Preenche dados do evento
-TelaEvento -> ServicoEvento : cadastrarEvento(dados)
+TelaEvento -> ServicoEvento : cadastrarEvento(evento)
 ServicoEvento -> ServicoEvento : verificarConflitoAgenda()
 ServicoEvento -> ServicoEvento : verificarCapacidade()
 alt regras atendidas
@@ -68,7 +68,3 @@ end
 2. **README** com instruções de compilação e execução.
 3. Diagrama de classes (UML) mostrando as entidades (`Evento`, `Convidado`).
 4. Diagrama de sequência (como o acima) para o caso de uso **Cadastrar Evento**.
-5. **Testes unitários** (JUnit) que comprovem:
-   - Cadastro de evento sem conflitos de horário.
-   - Bloqueio de cadastro de evento em horário já ocupado.
-   - Bloqueio de envio de convite para evento com lotação esgotada.

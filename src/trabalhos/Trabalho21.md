@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioBilhete
 end box
 Usuario -> TelaBilhetagem : emitir/validar bilhete
-TelaBilhetagem -> ServicoBilhetagem : processar(...)
+TelaBilhetagem -> ServicoBilhetagem : processar(bilhete)
 ServicoBilhetagem -> ServicoBilhetagem : validarBilheteUnico()
 ServicoBilhetagem -> ServicoBilhetagem : validarValidade()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Bilhete`, `Viagem`).  
-4. Diagrama de sequência (acima) para o caso de uso **Emitir/Validar Bilhete**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Emissão bem‑sucedida com número único.
-   - Falha ao emitir número duplicado.
-   - Falha ao validar bilhete expirado ou com saldo insuficiente.
+4. Diagrama de sequência (acima) para o caso de uso **Emitir/Validar Bilhete**.

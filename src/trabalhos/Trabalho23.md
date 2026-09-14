@@ -10,7 +10,7 @@ Um centro de suporte ao usuário precisa de um sistema desktop para registrar, a
 ## Requisitos Funcionais
 | Camada | Funcionalidade |
 |--------|----------------|
-| **Apresentação (JavaFX)** | Tela debertura de chamado (campo de título, descrição, prioridade, anexo), tela de listagem de chamados, tela de atualização de status e tela de relatório de métricas. Cada tela deve exibir mensagens de erro claras quando houver validação falha. |
+| **Apresentação (JavaFX)** | Tela de abertura de chamado (campo de título, descrição, prioridade, anexo), tela de listagem de chamados, tela de atualização de status e tela de relatório de métricas. Cada tela deve exibir mensagens de erro claras quando houver validação falha. |
 | **Negócio** | • Validar dados de entrada (campos obrigatórios, formato de data, prioridade entre 1‑3). <br>• Aplicar as regras de negócio descritas a seguir. |
 | **Dados** | • Armazenar chamados em memória (`ArrayList`) e, opcionalmente, em arquivo de log. <br>• Implementar operações CRUD (Criar, Ler, Atualizar, Excluir) para chamados e operações de consulta por status/prioridade. |
 
@@ -40,7 +40,7 @@ box "Persistência\n<Entity>" #yellow
     participant RepositorioChamado
 end box
 Usuario -> TelaChamado : Preenche dados do chamado
-TelaChamado -> ServicoAtendimento : criarChamado(titulo, descricao, prioridade)
+TelaChamado -> ServicoAtendimento : criarChamado(chamado)
 alt prioridade válida e limite de chamados
     ServicoAtendimento -> ServicoAtendimento : validarPrioridade()
     ServicoAtendimento -> ServicoAtendimento : validarTempoResolucao()
@@ -68,10 +68,5 @@ end
 ## Entregáveis
 1. Projeto Java completo (Maven ou Gradle) contendo os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução (`mvn clean package && java -jar target/atendimentos.jar`).  
-3. Diagrama deClasses (UML) mostrando as entidades (`Chamado`, `Prioridade`, `Usuario`) e as camadas.  
-4. Diagrama de sequência (como o acima) para o caso de uso **Registrar Novo Chamado**.  
-5. **Testes unitários** (JUnit) que comprovem:  
-   - Sucesso ao criar um chamado que respeita todas as regras.  
-   - Falha ao criar um chamado sem prioridade.  
-   - Falha ao ultrapassar o limite de 10 chamados abertos por usuário.  
-   - Falha ao fechar um chamado fora do prazo de resolução da sua prioridade.  
+3. Diagrama de Classes (UML) mostrando as entidades (`Chamado`, `Prioridade`, `Usuario`) e as camadas.  
+4. Diagrama de sequência (como o acima) para o caso de uso **Registrar Novo Chamado**.

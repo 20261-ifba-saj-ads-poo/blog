@@ -25,7 +25,7 @@ Um laboratório de pesquisa precisa de um sistema desktop para controlar equipam
 4. Resultado retornado e exibido.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioItem
 end box
 Usuario -> TelaInventario : cadastrarItem(dados)
-TelaInventario -> ServicoInventario : validarCodigoUnico()
+TelaInventario -> ServicoInventario : validarCodigoUnico(item)
 ServicoInventario -> ServicoInventario : validarEstoqueNaoNegativo()
 alt regras ok
     ServicoInventario -> RepositorioItem : salvarItem()
@@ -64,4 +64,3 @@ end
 2. README com instruções.
 3. Diagrama de classes (`Item`, `Movimentacao`).
 4. Diagrama de sequência (cadastrar item).
-5. Testes JUnit: cadastro único, rejeição de duplicado, saída que gera estoque negativo.

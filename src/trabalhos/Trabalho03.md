@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioReserva
 end box
 Usuario -> TelaReserva : Preenche dados da reserva
-TelaReserva -> ServicoReserva : solicitarReserva(...)
+TelaReserva -> ServicoReserva : solicitarReserva(reserva)
 ServicoReserva -> ServicoReserva : validarConflitoHorario()
 ServicoReserva -> ServicoReserva : validarAntecedencia()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Sala`, `Reserva`).  
-4. Diagrama de sequência (como acima) para o caso de uso **Registrar Reserva**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Reserva bem‑sucedida quando não há conflito e antecedência mínima atendida.
-   - Falha ao tentar reservar sala já ocupada no mesmo horário.
-   - Falha ao reservar com menos de 1 hora de antecedência.
+4. Diagrama de sequência (como acima) para o caso de uso **Registrar Reserva**.

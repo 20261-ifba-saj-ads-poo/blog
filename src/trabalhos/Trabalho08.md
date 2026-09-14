@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioMatricula
 end box
 Usuario -> TelaMatricula : preencher dados da matrícula
-TelaMatricula -> ServicoMatricula : solicitarMatricula(cursoId, alunoCpf)
+TelaMatricula -> ServicoMatricula : solicitarMatricula(matricula)
 ServicoMatricula -> ServicoMatricula : validarCapacidadeTurma()
 ServicoMatricula -> ServicoMatricula : validarMatriculaUnica()
 alt regras atendidas
@@ -66,8 +66,4 @@ end
 1. Projeto Java completo (Maven/Gradle) com os pacotes `presentation`, `business`, `data` e `model`.  
 2. **README** com instruções de compilação e execução.  
 3. Diagrama de classes (UML) mostrando as entidades (`Curso`, `Aluno`, `Matricula`).  
-4. Diagrama de sequência (como acima) para o caso de uso **Registrar Matrícula**.  
-5. **Testes unitários** (JUnit) que comprovem:
-   - Matrícula bem‑sucedida quando há vagas e o aluno ainda não está matriculado.
-   - Falha ao tentar matricular quando a turma está completa.
-   - Falha ao matricular o mesmo aluno duas vezes no mesmo curso.
+4. Diagrama de sequência (como acima) para o caso de uso **Registrar Matrícula**.

@@ -20,12 +20,12 @@ Grandes empresas precisam controlar solicitações, cotações, aprovações e r
 
 ## Fluxo de Comunicação
 1. Usuário preenche pedido de compra.
-1. Camada de Apresentação envia dados ao **Serviço de Compras**.
-1. Se tudo estiver correto, persiste o pedido e devolve confirmação.
-1. Caso alguma regra falhe, exibe mensagem de erro.
+2. Camada de Apresentação envia dados ao **Serviço de Compras**.
+3. Se tudo estiver correto, persiste o pedido e devolve confirmação.
+4. Caso alguma regra falhe, exibe mensagem de erro.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -38,7 +38,7 @@ box "Persistência" #yellow
     participant RepositorioCompra
 end box
 Usuario -> TelaCompra : preencher pedido
-TelaCompra -> ServicoCompra : criarPedido(dados)
+TelaCompra -> ServicoCompra : criarPedido(pedidoCompra)
 ServicoCompra -> ServicoCompra : validarOrcamento()
 ServicoCompra -> ServicoCompra : validarFornecedor()
 alt regras ok
@@ -57,7 +57,7 @@ end
 | Área | Peso | Critérios |
 |------|------|-----------|
 | Interface (JavaFX) | 20 pts | Telas de compra completas e usáveis |
-| Negócio | 30 pts | Implementação das três regras de negócio |
+| Negócio | 30 pts | Implementação das duas regras de negócio (orçamento e fornecedor) |
 | Dados | 20 pts | Armazenamento e CRUD funcionando |
 | Separação em Camadas | 20 pts | Arquitetura em 3 camadas bem definida |
 | Boas Práticas | 10 pts | Código limpo e organizado |
@@ -67,4 +67,3 @@ end
 2. README com instruções de compilação e execução.
 3. Diagrama de classes (`Fornecedor`, `PedidoCompra`, `Cotacao`, `CentroCusto`, `Produto`).
 4. Diagrama de sequência (criação de pedido).
-5. Testes JUnit: orçamento insuficiente, fornecedor desabilitado.

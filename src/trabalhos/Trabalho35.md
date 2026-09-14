@@ -27,7 +27,7 @@ Pequenos negócios precisam controlar mudanças de preços, fornecedores e estoq
 5. Camada de Apresentação exibe resultado.
 
 ### Diagrama de Sequência
-```plantuml
+```plantuml{kroki=true}
 @startuml
 actor Usuario
 box "Apresentação" #lightblue
@@ -40,8 +40,8 @@ box "Persistência" #yellow
     participant RepositorioMudanca
 end box
 Usuario -> TelaMudanca : cadastra mudança
-TelaMudanca -> ServicoMudanca : registrarMudanca(dados)
-ServicoMudanca -> ServicoMudanca : validarAprovissao()
+TelaMudanca -> ServicoMudanca : registrarMudanca(mudancaPreco)
+ServicoMudanca -> ServicoMudanca : validarAprovacao()
 ServicoMudanca -> ServicoMudanca : validarEstoque()
 ServicoMudanca -> ServicoMudanca : validarData()
 alt regras ok
@@ -53,7 +53,8 @@ else erro
     ServicoMudanca --> TelaMudanca : mensagem de erro
     TelaMudanca --> Usuario : exibir alerta
 end
-@enduml```
+@enduml
+```
 
 ## Barema de Avaliação (100 pontos)
 | Área | Peso | Critérios |
@@ -69,4 +70,3 @@ end
 2. README com instruções.
 3. Diagrama de classes (`Produto`, `MudancaPreco`).
 4. Diagrama de sequência (registrar mudança).
-5. Testes JUnit: aprovação automática para aumento ≤10 %, bloqueio para aumento >10 % sem aprovação, data inválida rejeitada.
