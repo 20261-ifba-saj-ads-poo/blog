@@ -50,5 +50,7 @@ A entrega deverá contemplar **todas as funcionalidades implementadas e integrad
 
 ### Pelo GH
 ```
+gh extension install foundation50/gh-student
+gh student login
 gh student accept 20261-ifba-saj-ads-poo 20261-ads-poo-50 trabalho-semestre
 ```
